@@ -1,7 +1,10 @@
 import React from 'react'
 import './App.css'
 
+import { useSelector, useDispatch } from 'react-redux'
+
 const App = () => {
+  const myState = useSelector((state) => state.changeTheNumber)
   return (
     <>
     <div className="container">
@@ -9,7 +12,7 @@ const App = () => {
       <h4>Using React and Redux</h4>
       <div className="quantity">
         <a className='quantityMinus' title = "Decrement"><span>-</span></a>
-        <input type="text" name='quantity' className='quantityInput' value='0' />
+        <input type="text" name='quantity' className='quantityInput' value={myState} />
         <a className='quantityPlus' title = "Increment"><span>+</span></a>
       </div>
 

@@ -4,14 +4,14 @@ import App from './App.jsx'
 import './index.css'
 import store from './store.jsx'
 
-import { provider} from "react-redux"
+import { Provider} from "react-redux"
 
 store.subscribe(() => console.log(store.getState()))
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <provider store ={store}>
+    <Provider store ={store}>
     <App />
-    </provider>
+    </Provider>
   </React.StrictMode>,
 )
